@@ -29,6 +29,7 @@ func _physics_process(delta):
 	elif direction < 0:
 		playerSprite.flip_h = false
 		#penis man wee woo
+		# what the helly
 	# Play animationsa
 	if direction == 0:
 		playerSprite.play("idle")
