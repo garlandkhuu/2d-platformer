@@ -1,12 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxa3if5q4n7lu"]
-
-[ext_resource type="PackedScene" uid="uid://ckxq7aityc76u" path="res://scenes/player.tscn" id="1_xxwhn"]
+[gd_scene load_steps=2 format=3 uid="uid://cxa3if5q4n7lu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_icesg"]
 
 [node name="Game" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_xxwhn")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -63)
