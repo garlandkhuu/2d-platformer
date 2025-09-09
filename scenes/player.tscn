@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://ckxq7aityc76u"]
+[gd_scene load_steps=17 format=3 uid="uid://ckxq7aityc76u"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_08te6"]
+[ext_resource type="Script" uid="uid://dmj1mkwmefmgk" path="res://scripts/player.gd" id="1_08te6"]
 [ext_resource type="Texture2D" uid="uid://bjdp20qgf8gy6" path="res://assets/player/player.png" id="1_ygs3r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybldg"]
@@ -97,16 +97,24 @@ animations = [{
 radius = 8.0
 height = 56.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(34, 79)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_08te6")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -40)
 sprite_frames = SubResource("SpriteFrames_acftm")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.545913
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -30)
 shape = SubResource("CapsuleShape2D_p4tka")
+
+[node name="interactable" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(-3, -39.5)
+shape = SubResource("RectangleShape2D_g2els")
