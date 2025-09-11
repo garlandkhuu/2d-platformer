@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxa3if5q4n7lu"]
+[gd_scene load_steps=6 format=3 uid="uid://cxa3if5q4n7lu"]
 
 [ext_resource type="PackedScene" uid="uid://ckxq7aityc76u" path="res://scenes/player.tscn" id="1_xxwhn"]
-[ext_resource type="PackedScene" path="res://scenes/temp_enemy.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c0nqcohrfym18" path="res://scenes/temp_enemy.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://1d60ri1qd1my" path="res://scenes/item_usb.tscn" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_icesg"]
 
@@ -38,3 +39,6 @@ position = Vector2(173, -15)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyBoundRight"]
 position = Vector2(115, -30)
 shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="item_usb" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(-241, -14)
